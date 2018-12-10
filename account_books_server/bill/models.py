@@ -9,7 +9,7 @@ class AccountBook(models.Model):
     create_time = models.DateTimeField()
     money = models.IntegerField(default=0)
     note = models.CharField(max_length=255)
-    avatar_url = models.CharField(max_length=255)
+    avatar_url = models.CharField(max_length=255, default=None)
 
     def __str__(self):
         return self.create_time
